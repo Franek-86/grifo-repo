@@ -942,7 +942,7 @@ textarea::placeholder {
 /* -----------------------------------------blog page section------------------------------ */
 
 .blog-page-section {
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 .slide-container {
   display: flex;
@@ -959,6 +959,7 @@ textarea::placeholder {
   position: relative;
   text-align: center;
   height: 100%;
+  transition: var(--transition);
 }
 
 .blog-page-center img {
@@ -970,11 +971,23 @@ textarea::placeholder {
   box-shadow: var(--light-shadow);
   margin-bottom: 2rem;
   border-radius: 50%;
+  transition: var(--transition);
 }
+.slide-container:hover img {
+  background-color: var(--clr-primary-1);
+}
+.slide-container:hover .blog-page-text {
+  color: var(--clr-gray-5);
+}
+
+/* .blog-page-center img {
+  background-color: var(--clr-primary-1);
+} */
+
 .blog-page-center h4 {
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--clr-primary-5);
+  color: var(--clr-primary-6);
   letter-spacing: var(--spacing);
   margin: 0.5rem 0;
 }
@@ -985,10 +998,15 @@ textarea::placeholder {
 }
 .blog-page-text {
   color: var(--clr-gray-8);
-  line-height: 1.5;
-
   margin: 0 auto;
   letter-spacing: 1px;
+  line-height: 1.25 !important;
+}
+
+@media screen and (min-width: 765px) {
+  .blog-page-center h4 {
+    line-height: 1.25rem !important;
+  }
 }
 
 /* set buttons */
